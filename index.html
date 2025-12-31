@@ -1,217 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pancono Coin (PANNO) – Testnet Mining & Airdrop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pancono Coin (PANNO) – Testnet Mining & Airdrop</title>
 
 <style>
-  /* Base Styling */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+:root{
+  --bg-dark:#070f1e;
+  --card:#0f1f3a;
+  --accent:#00d4ff;
+  --accent2:#ffd700;
+  --text:#e6f0ff;
+  --muted:#9bb0cc;
+}
 
-  body {
-    background-color: #0b1a33;
-    color: #ffffff;
-    line-height: 1.7;
-    padding: 20px;
-    font-size: 18px;
-  }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
 
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    background: #142a4c;
-    border-radius: 15px;
-    padding: 30px 40px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  }
+body{
+  background: radial-gradient(circle at top, #0b1a33, #050a16);
+  color:var(--text);
+  line-height:1.7;
+  padding:20px;
+}
 
-  h1 {
-    color: #00d4ff;
-    font-size: 2.2em;
-    margin-bottom: 15px;
-  }
+.container{
+  max-width:1000px;
+  margin:auto;
+  background:linear-gradient(180deg,#0f1f3a,#091426);
+  border-radius:18px;
+  padding:40px 35px;
+  box-shadow:0 25px 60px rgba(0,0,0,.6);
+}
 
-  h2 {
-    color: #ffd700;
-    font-size: 1.7em;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
+/* Headings */
+h1{
+  font-size:2.4rem;
+  color:var(--accent);
+  margin-bottom:15px;
+}
 
-  p {
-    margin-bottom: 15px;
-    font-size: 18px;
-  }
+h2{
+  font-size:1.7rem;
+  color:var(--accent2);
+  margin:35px 0 15px;
+}
 
-  ul {
-    margin-left: 25px;
-    margin-bottom: 15px;
-    font-size: 18px;
-  }
+p{
+  color:var(--text);
+  margin-bottom:15px;
+}
 
-  li {
-    margin-bottom: 12px;
-  }
+small{
+  color:var(--muted);
+}
 
-  .buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 25px;
-    margin-bottom: 15px;
-  }
+/* Hero */
+.hero{
+  text-align:center;
+  margin-bottom:35px;
+}
 
-  .buttons a {
-    flex: 1;
-    text-align: center;
-    padding: 18px 20px;
-    background: #00d4ff;
-    color: #0b1a33;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 10px;
-    font-size: 18px;
-    transition: 0.3s;
-  }
+.hero p{
+  max-width:760px;
+  margin:auto;
+  font-size:1.05rem;
+  color:var(--muted);
+}
 
-  .buttons a:hover {
-    background: #00b2cc;
-    color: #ffffff;
-    transform: scale(1.05);
-  }
+/* Buttons */
+.actions{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin:30px 0;
+}
 
-  @media (max-width: 600px) {
-    body {
-      font-size: 17px;
-    }
-    .buttons {
-      flex-direction: column;
-    }
-  }
+.btn{
+  padding:16px 28px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:1.05rem;
+  transition:.3s ease;
+  text-align:center;
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,var(--accent),#3fe6ff);
+  color:#001018;
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 30px rgba(0,212,255,.4);
+}
+
+.btn-secondary{
+  background:rgba(255,255,255,.08);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.2);
+}
+
+.btn-secondary:hover{
+  background:rgba(255,255,255,.14);
+}
+
+/* Sections */
+.section{
+  margin-top:40px;
+}
+
+.card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  padding:25px;
+  margin-top:20px;
+}
+
+/* Lists */
+ul{
+  padding-left:20px;
+}
+
+li{
+  margin-bottom:10px;
+  color:var(--text);
+}
+
+/* Images */
+img{
+  width:100%;
+  border-radius:14px;
+  margin-top:20px;
+  border:1px solid rgba(255,255,255,.12);
+}
+
+/* Footer note */
+.note{
+  background:rgba(255,215,0,.1);
+  border-left:4px solid var(--accent2);
+  padding:15px 18px;
+  border-radius:10px;
+  margin-top:25px;
+}
+
+/* Mobile */
+@media(max-width:600px){
+  h1{font-size:2rem;}
+  h2{font-size:1.4rem;}
+  .container{padding:28px 22px;}
+}
 </style>
 </head>
 
 <body>
+
 <div class="container">
-  
-   <br />
-       <br />
-     <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="zoom-in" data-aos-delay="400">
-        
- <a href="https://github.com/ChaserOd/download_core_wallet/releases/tag/core_wallet" class="px-8 py-3 bg-white/10 backdrop-blur-md border border-white/20 text-white text-lg font-semibold rounded-xl shadow-xl transition transform hover:scale-105">
-          Download Core Wallet at GitHub
-          </a>
-        
 
-        </div>
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Pancono Coin (PANNO)</h1>
+    <p>Testnet Mining • Airdrop Rewards • Early Community Advantage</p>
 
+    <div class="actions">
+      <a href="https://github.com/ChaserOd/download_core_wallet/releases/tag/core_wallet" class="btn btn-primary">
+        Download Core Wallet (Windows)
+      </a>
+      <a href="https://youtu.be/9lVpLvNUKNA" target="_blank" class="btn btn-secondary">
+        Watch Mining Tutorial
+      </a>
+    </div>
+  </div>
 
-  
-   <br />
-       <br />
-      
-      <p class="mb-10">
-     Click above <strong>'Download Core Wallet at GitHub',</strong> at GitHub page find <strong>'core wallet zip folders,</strong> and download it, extract zip folder, find application files, double click it to start mining coins( Download only for Windows). Watch above video on how to mine and earn.
-   
-       <p class="mb-10">  
- 
-         
-To earn reward of 1 PANNO by mining per block, download <strong> 'Core.Wallet.For.Earning.1.Panno.zip.</strong>. Inviting of friends not required, simply download and start. CPU mining with low difficulty, mine per block every 1 to 5 min.
-<br /><br />
-    <h2 class="text-2xl font-bold text-yellow-300 mt-8 mb-3">✅ For Higher Rewards Claiming: Instead of mining per block and earning 1 PANNO, choose any of the options below for high earnings:</h2>
-         <br /><br />
-To earn 50 PANNO on per block mining: First invite 3 friends through the Telegram bot below, once inviting task is done click above Download Core Wallet at GitHub and download <strong>High-.Earning.Core.Wallet.1.For.Earning.50.Panno.zip</strong> from GitHub page.
-<br /><br />
-Same way to earn 100 PANNO on per block mining: First invite 10 friends and then download <strong>High-.Earning.Core.Wallet.2.For.Earning.100.Panno.zip</strong>
+  <!-- MINING INFO -->
+  <div class="section card">
+    <p>
+      Click <strong>Download Core Wallet</strong>. On the GitHub page, download the required
+      <strong>Core Wallet ZIP</strong>, extract it, open the application, and start mining.
+      Mining is available only for <strong>Windows</strong>.
+    </p>
 
-<br /><br />
-To earn 200 PANNO on per block mining: First invite 20 friends and then download <strong>High-.Earning.Core.Wallet.3.For.Earning.200.Panno.zip</strong>
+    <p>
+      To earn <strong>1 PANNO per block</strong>, download
+      <strong>Core.Wallet.For.Earning.1.Panno.zip</strong>.
+      No invitations required. CPU mining with low difficulty —
+      one block every <strong>1–5 minutes</strong>.
+    </p>
+  </div>
 
-<br /><br />
-To earn 500 PANNO on per block mining: First invite 30 friends and then download <strong>High-.Earning.Core.Wallet.4.For.Earning.500.Panno.zip</strong>
-
-<br /><br />
-To earn 800 PANNO on per block mining: First invite 50 friends and then download <strong>High-.Earning.Core.Wallet.5.For.Earning.800.Panno.zip</strong>
-<br /><br />
-Additionally earn 1000 Panno for inviting each friends at Telegram Bot.
-      
- <br /><br />
- If you are mining through any of the above high earnings core wallets (50 - 800 earnings), make sure to invite friends as explained above. To invite friends click below Telegram bot link, in there find your Invite Friend Link, copy and share it at social media. To know how many friends invited, check the 'total count of invited friends' at same Bot.
-  <br /><br />
-    Note: Sending and receiving PANNO is currently disabled at those Core Wallets. At this stage, only mining is enabled so users can only mine. Transfer features (send & receive coins from one user to another) will be enabled once the mainnet is officially launched. <br /> What you need to do now: Download wallet, start mining daily. Wait for the Pancono mainnet launch & its full wallet functionality is enabled, then you will be able to use your mined coins.
-  <br /><br />      
-         
-         <br /> 
-   </p>     
-<br />
-<div class="mt-8 text-center">
-  <a href="https://t.me/PanconoWallet_Bot?start" class="bg-blue-600 px-6 py-3 rounded-xl text-lg font-semibold hover:bg-blue-700 transition">
-    Pancono Airdrop Telegram Bot
-  </a>
-</div>
-      
-<br /><br /><br />
-
-<p class="mb-10"> 
-Pancono Core Wallet and Blockchain Features:
-<br /><br /> Designed similarly to the Bitcoin Core wallet, the Pancono Wallet provides peer-to-peer functionality for sending and receiving $PANNO coins directly on the Pancono blockchain.
-
- <ul>
-      <li>➤ Full Node Architecture works similar to Bitcoin core wallet— stores and validates the entire blockchain for maximum decentralization and independent verification.
-      <li>➤ UTXO Transaction Model — ensures secure, traceable, and conflict-free transactions using unspent outputs.
-      <li>➤ Proof-of-Work Mining System
-      <li>➤ On-chain Wallet Address Generation
-      <li>➤ Peer-to-Peer Network Layer
-     <li> ➤ Based on SHA-256 cryptographic hash function
-      <li>➤ Mempool Management
-      <li>➤ Native Coin Balance Tracking —
-      <li>➤ Robust Blockchain Database Storage — LevelDB-based storage
-      <li>➤ Secure Transaction Signing   
+  <!-- HIGH EARNING -->
+  <div class="section">
+    <h2>High-Earning Mining Options</h2>
+    <div class="card">
+      <p>Earn more PANNO per block by completing Telegram invite tasks:</p>
+      <ul>
+        <li>Invite 3 friends → <strong>50 PANNO / block</strong></li>
+        <li>Invite 10 friends → <strong>100 PANNO / block</strong></li>
+        <li>Invite 20 friends → <strong>200 PANNO / block</strong></li>
+        <li>Invite 30 friends → <strong>500 PANNO / block</strong></li>
+        <li>Invite 50 friends → <strong>800 PANNO / block</strong></li>
       </ul>
-      
+      <p>Additionally, earn <strong>1000 PANNO</strong> for every invited friend.</p>
+    </div>
+  </div>
 
-</p>
-<br /><br /><br />
-      
-   </section>
-       <br />
-      <br />
-      <br /><br /><br />
-      
-    <h1 class="text-3xl md:text-4xl font-bold text-cyan-300 mb-5">
-     Airdrop: Claim Pancono (For Telegram, Mobile Users)
- </h1>
+  <!-- TELEGRAM -->
+  <div class="section actions">
+    <a href="https://t.me/PanconoWallet_Bot?start" class="btn btn-primary">
+      Join Pancono Telegram Airdrop Bot
+    </a>
+  </div>
 
-   <h1> Total Supply of Pancono Coin </h1> 
-<p> Pancono’s max supply is capped at 30 million, making it a low-supply coin. Scarcity creates higher long-term value potential, giving early miners and active community members the biggest advantage.  </p>
+  <!-- NOTE -->
+  <div class="note">
+    Sending and receiving PANNO is currently disabled.
+    Mining is active during testnet.
+    Transfers will be enabled after the official <strong>Mainnet Launch</strong>.
+  </div>
 
-  
- <br />
-  
-  <!-- Buttons -->
-<div class="buttons">
-<a href="https://youtu.be/9lVpLvNUKNA" target="_blank">Watch Video on How to Mine</a>
+  <!-- FEATURES -->
+  <div class="section">
+    <h2>Pancono Wallet & Blockchain Features</h2>
+    <div class="card">
+      <ul>
+        <li>Full-node architecture similar to Bitcoin Core</li>
+        <li>UTXO-based transaction model</li>
+        <li>Proof-of-Work consensus</li>
+        <li>SHA-256 cryptography</li>
+        <li>Peer-to-peer networking</li>
+        <li>LevelDB blockchain storage</li>
+        <li>Secure transaction signing</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SUPPLY -->
+  <div class="section">
+    <h2>Total Supply</h2>
+    <div class="card">
+      <p>
+        Pancono has a <strong>fixed maximum supply of 30 million coins</strong>.
+        Limited supply increases long-term scarcity and rewards early miners
+        and community members.
+      </p>
+    </div>
+  </div>
+
+  <!-- IMAGES -->
+  <div class="section">
+    <h2>Mining & Wallet Preview</h2>
+    <img src="image/imagea.png" alt="Pancono Mining Session">
+    <img src="image/airdrop_import_private_keys.png" alt="Pancono Airdrop Wallet">
+  </div>
 
 </div>
-  
- <br />
 
-
-
-<p>Start mining today and maximize your airdrop! 🚀💰🔥</p>
-
-<p><strong>Image of Mining Session:</strong></p>
-<img src="image/imagea.png" alt="Pancono Wallet App" style="max-width:100%; margin-top:15px; border-radius:10px;">
-
-
-  <img src="image/airdrop_import_private_keys.png" alt="Pancono Wallet App" style="max-width:100%; margin-top:15px; border-radius:10px;">
-
-</div>
 </body>
 </html>
